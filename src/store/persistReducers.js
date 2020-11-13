@@ -1,4 +1,3 @@
-
 import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
 
@@ -7,7 +6,7 @@ export default reducers => {
     {
       key: 'meetapp',
       storage,
-      whitelist: ['auth', 'user'],
+      whitelist: ['auth', 'user', 'products'],
     },
     reducers
   );

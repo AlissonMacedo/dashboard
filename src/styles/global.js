@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 
 export default createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
@@ -19,7 +20,7 @@ export default createGlobalStyle`
 
 html, body, #root {
   height: 100%;
-  background: linear-gradient(-90deg, #22202C, #402845);
+  background: #f4f5f7;
 }
 
 body {

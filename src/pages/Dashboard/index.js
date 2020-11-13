@@ -16,7 +16,7 @@ export default function Dashboard() {
   useEffect(() => {
     async function loadMeetup() {
       try {
-        dispatch(fetchMeetupRequest());
+        // dispatch(fetchMeetupRequest());
       } catch (error) {
         toast.error('Occoreu um erro ao carregar os meetups');
       }
@@ -26,34 +26,7 @@ export default function Dashboard() {
 
   return (
     <Container>
-      <header>
-        <h2>Meus meetups</h2>
-        <Link to="/meetup/new">
-          <Button>
-            <MdAddCircleOutline size={20} />
-            Novo meetup
-          </Button>
-        </Link>
-      </header>
-
-      <List>
-        {meetups.map(meetup => (
-          <Link
-            key={String(meetup.id)}
-            to={meetup.past ? '/' : `/meetup/${meetup.id}/details`}
-          >
-            <li past={meetup.past}>
-              <strong>{meetup.title}</strong>
-              <div>
-                <strong>
-                  {meetup.past ? 'Esse meetup ja aconteçeu' : meetup.date}
-                </strong>
-                <MdChevronRight size={30} />
-              </div>
-            </li>
-          </Link>
-        ))}
-      </List>
+      <h1>Dashboard</h1>
     </Container>
   );
 }
